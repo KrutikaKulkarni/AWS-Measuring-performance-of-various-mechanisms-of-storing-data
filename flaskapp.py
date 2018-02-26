@@ -15,11 +15,11 @@ app = Flask(__name__)
 UPLOAD_PATH= "/home/ubuntu/upload"
 app.config['UPLOAD_PATH'] = UPLOAD_PATH
 
-host = 'secureassgndb.c6zq9suvhyba.us-east-2.rds.amazonaws.com'
+host = ''
 port = 3306
-dbusername ='root'
-dbpassword ='welcome123'
-dbname ='secureAssignDB'
+dbusername =''
+dbpassword =''
+dbname =''
 
 
 @app.route("/")
