@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EC2 Table modification</title>
+</head>
+<body>
+<center>
+<form id="fileUploadForm" enctype="multipart/form-data" method="post" action="execquery">
+							Name : <input id="fileInput" name="fieldName" type="text" /> <br><br>
+							Clause 1: <input id="cclause1" name="cclause1" type="text" /><br><br>
+							Clause 2: <input id="cclause2" name="cclause2" type="text" /><br><br>
+							With Memcache <input id="withMem" name="withmem" type="text" /><br><br>
+							<input id="runquery" class="button_text"
+								type="submit" name="submit" value="Run" />
+						</form>
+</center>
+	<h2> List table contents</h2>
+	<table>
+         {% for row in data %}
+        <tr>
+      <td>{{ row[0] }}</td>
+      <td>{{ row[1] }}</td>
+      <td>{{ row[14] }}</td>
+    </tr>
+        {% endfor %}
+	</table>
+</body>
+</html>
